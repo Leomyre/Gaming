@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Jeux</title>
+</head>
+<body>
+    <h1>Liste des Jeux Disponibles</h1>
+    <ul>
+        {% for game in games %}
+        <li>
+            <h2>{{ game.name }}</h2>
+            <p>{{ game.description }}</p>
+            <a href="{{ game.slug }}/">Jouer</a> <!-- Lien vers le jeu -->
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
